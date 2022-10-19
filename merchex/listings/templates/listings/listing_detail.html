@@ -4,7 +4,10 @@
 
   <h2>{{ listing.name }}</h2>
 
-  <p><a href="{% url 'listing-update' listing.id %}">Modifier l'annonce</a></p>
+  <p>
+    <a href="{% url 'listing-update' listing.id %}">Modifier l'annonce</a>
+    <a href="{% url 'listing-delete' listing.id %}">Supprimer l'annonce</a>
+  </p>
 
   <ul>
     <li>Description : {{ listing.description }}</li>

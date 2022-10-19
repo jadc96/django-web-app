@@ -3,7 +3,10 @@
 {% block content %}
 
   <h2>{{ band.name }}</h2>
-  <p><a href="{% url 'band-update' band.id %}">Modifier le groupe</a></p>
+  <p>
+    <a href="{% url 'band-update' band.id %}">Modifier le groupe</a>
+    <a href="{% url 'band-delete' band.id %}">Supprimer le groupe</a>
+  </p>
 
   <ul>
     <li>Genre : {{ band.get_genre_display }}</li>
